@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+
+public class Homework3Solution {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.println("Enter the number of Representatives voting for the bill");
+		int representatives = keyboard.nextInt();
+		
+		if(representatives >= 218) {
+			System.out.println("Enter the number of Senators voting for the bill");
+			int senators = keyboard.nextInt();
+			if(senators >= 51) {
+				System.out.println("Did the president sign or veto the bill, Enter true for sign or false for veto");
+				boolean president = keyboard.nextBoolean();
+				if(president == true) {
+					System.out.println("The bill has become a law.");
+				}
+				else {
+					System.out.println("The president has vetoed the bill.");
+					System.out.println("The House of Representatives is trying to override the bill");
+					System.out.println("Enter the number of Representatives voting to override the bill");
+					int overrideRepresentatives = keyboard.nextInt();
+					if(overrideRepresentatives >= 290) {
+						System.out.println("The Senate is trying to override the bill");
+						System.out.println("Enter the number of Senators voting to override the bill");
+						int overrideSenators = keyboard.nextInt();
+						if(overrideSenators >= 67) {
+							System.out.println("The veto is overriden by the House and the Senate and has become a law.");
+						}
+						else {
+							System.out.println("The Senate was unable to override the president's veto and the bill did not become a law.");
+						}
+					}
+					else {
+						System.out.println("The House was unable to override the president's veto and the bill did not become law.");
+					}
+				}
+			}
+			else {
+				System.out.println("The bill did not pass the Senate and did not become a law.");
+			}
+		}
+		else {
+			System.out.println("The bill did not pass the House and did not become a law.");
+		}
+	}
+
+}
