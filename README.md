@@ -1,5 +1,6 @@
 # Congress-Bill-proposal
-Program shows if bill passed in congress becomes a law
+Program shows if bill passed in congress becomes a law.
+
 Create a program that determines whether a bill proposed in the United States Congress has
 become a law. The first step in having a bill become a law is to have it pass the United States
 House of Representatives. Since there are 435 representatives in the House, a majority of them
